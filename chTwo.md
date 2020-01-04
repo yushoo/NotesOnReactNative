@@ -15,10 +15,10 @@ const App = props => {
 - Views are compiled into real Native components. The javascript won't be compiled.
 
 ### More Details. (Platform Functionality)
-- React for the Web: <div>, <input>
+- React for the Web: div, input
 - Native Component (Android): android.view, EditText
 - Native Component (ios): UIView, UITextField
-- React Native: <View>, <TextInput>
+- React Native: View, TextInput
 
 ### JavaScript Part/ Our Logic
 - UI:
@@ -33,4 +33,3 @@ const App = props => {
     ### Visual of Behind the Scenes
     ![overviewOne](/images/overviewOne.png)
 
-    
