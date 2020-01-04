@@ -1,6 +1,8 @@
 # NotesOnReactNative
 Learning Sources: Academind, React Native Documentation, Stack Overflow
 
+Learning/practice projects located in projects directory
+
 - chOne:
     - What is React Native
     - Overview

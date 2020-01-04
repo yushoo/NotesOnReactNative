@@ -34,3 +34,10 @@ There are two options: Explo CLI/Tool and React Native CLI. You can always switc
 ### How Expo Works
 ![expo](/images/expoInfo.png)
 
+### Getting Expo to work on Mac
+The get started page for expo requires the npm to install expo-cli. 
+    - npm install expo-cli --global
+For mac or linux, to make this terminal command to work, you need to add sudo in front of it.
+    - sudo npm install expo-cli --global
+
+
