@@ -13,7 +13,7 @@ Learning/practice projects located in projects directory
 - chTwo:
     - Behind the scenes
 
-- chThree:
+- chThree (The Basics):
     - Components
     - Functions
     - css in react native? 

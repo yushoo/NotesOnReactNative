@@ -33,3 +33,11 @@ const App = props => {
     ### Visual of Behind the Scenes
     ![overviewOne](/images/overviewOne.png)
 
+    ### Things to things to Keep in Mind
+    - No or very little cross-platform styling of components. You need to check how the code effects the native application for each different device.
+        - Style components on your own or use third-party libraries.
+    - Only a basic set of pre-build components (everything you need though)
+        - Build components on your own or use third-party libraries 
+    - Tools to create responsive designs but no responsiveness out of the box
+        - Create responsive designs on your own
+
