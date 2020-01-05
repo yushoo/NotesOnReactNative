@@ -1,7 +1,9 @@
 # NotesOnReactNative
 Learning Sources: Academind, React Native Documentation, Stack Overflow
 
-Learning/practice projects located in projects directory
+- Learning/practice projects located in projects directory: 
+    - rn-first-app: barebones test application
+    - rn-complete-guide: An application that allows a user to set up goals
 
 - chOne:
     - What is React Native
