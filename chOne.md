@@ -40,4 +40,21 @@ The get started page for expo requires the npm to install expo-cli.
 For mac or linux, to make this terminal command to work, you need to add sudo in front of it.
     - sudo npm install expo-cli --global
 
+### File Directory of expo init 
+- .expo
+    - Configuration for expo
+    - No need to touch this
+- assets
+    - Holds images
+- node_modules
+    - holds all the dependencies of the project
+- .gitignore    
+- App.js
+    - renders the application
+- app.json
+- babel.config.js
+    - Configures how the javascript is optimized and compiled
+    - Can usually leave it alone
+- package.json
+    - manage dependencies as usual
 
