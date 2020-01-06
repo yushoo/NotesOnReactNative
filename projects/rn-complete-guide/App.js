@@ -10,6 +10,7 @@ export default function App() {
   };
 
   const addGoalHandler = () => {
+    //anonymous function
     setGoals(currentGoals => [...currentGoals, enteredGoal]);
   };
   
@@ -24,7 +25,7 @@ export default function App() {
         <Button title="ADD" onPress={addGoalHandler}/>
       </View>
       <View>
-        {goals.map((goal) => <Text>{goal}</Text>)}
+        {goals.map((goal, index) => <Text key={index}>{goal}</Text>)}
       </View>
     </View>
   );
