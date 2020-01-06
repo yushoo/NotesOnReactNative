@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
+  const [enteredGoal, setEnteredGoal] = useState('');
+
+  const goalInputHandler = (enteredText) => {
+    setEnteredGoal(enteredText);
+  };
+
+  const addGoalHandler = () => {
+    console.log(enteredGoal);
+  };
+  
   return (
     <View style={{styles.screen}}>
       <View style={{styles.inputContainer}}>
-        <TextInput placeholder="Goal" style={{styles.inputArea}}/>
-        <Button title="ADD" />
+        <TextInput placeholder="Goal" 
+                   style={{styles.inputArea}} 
+                   //don't add paranthesis because don't want to execute immediately
+                   onChangeText={goalInputHandler}
+                   value={enteredGoal}/>
+        <Button title="ADD" onPress={addGoalHandler}/>
       </View>
       <View>
 
