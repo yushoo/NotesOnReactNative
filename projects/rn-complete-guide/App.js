@@ -13,10 +13,10 @@ export default function App() {
   };
   
   return (
-    <View style={{styles.screen}}>
-      <View style={{styles.inputContainer}}>
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
         <TextInput placeholder="Goal" 
-                   style={{styles.inputArea}} 
+                   style={styles.inputArea} 
                    //don't add paranthesis because don't want to execute immediately
                    onChangeText={goalInputHandler}
                    value={enteredGoal}/>
