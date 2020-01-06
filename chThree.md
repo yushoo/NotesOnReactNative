@@ -5,7 +5,8 @@
         - Works like a div in web development
         - Good for wrapping and applying styles to a group of components
     - Text
-        - Rendering text 
+        - Outputting text 
+        - required for text
     - Button / Touchable
     - TextInpit
     -Image
