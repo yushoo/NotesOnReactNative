@@ -20,3 +20,6 @@ Learning Sources: Academind, React Native Documentation, Stack Overflow
     - Functions
     - css in react native? 
 
+- Questions???
+    - When to use self closing components or closing components
+

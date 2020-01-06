@@ -21,9 +21,11 @@
 ### Functions
 - event handlers:
     - onPress = onClick
+- KeyExtractor takes a look at the props of its item for an index
 
 ### Layout
 - Use flexbox for organizing and creating layouts
     - for the main axis you style the child elements (flex style property), and for the cross axis you stlye the parent element
     - Can use flexbox stylings to have content adjust itself to the available space
 - There are some differences between web and mobile flexbox
+- Flatlist renders what's on the screen whereas scrollview renders all components. Both has it's pros and cons, but for an application with thousands of components, the scrollview would be ineffecient. 
