@@ -25,4 +25,5 @@
 ### Layout
 - Use flexbox for organizing and creating layouts
     - for the main axis you style the child elements (flex style property), and for the cross axis you stlye the parent element
+    - Can use flexbox stylings to have content adjust itself to the available space
 - There are some differences between web and mobile flexbox

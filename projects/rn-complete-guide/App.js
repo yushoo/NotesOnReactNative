@@ -4,10 +4,14 @@ import { StyleSheet,
           View, 
           TextInput, 
           Button, 
-          ScrollView } from 'react-native';
+          ScrollView,
+          FlatList
+        } from 'react-native';
 
 export default function App() {
+  //text 
   const [enteredGoal, setEnteredGoal] = useState('');
+  //list of objects
   const [goals, setGoals] = useState([]);
 
   const goalInputHandler = (enteredText) => {
@@ -16,7 +20,11 @@ export default function App() {
 
   const addGoalHandler = () => {
     //anonymous function
-    setGoals(currentGoals => [...currentGoals, enteredGoal]);
+    //each goal is an object with props key and value
+    //concatenate currentGoals.length to string because flatlist expects key to be a string
+    setGoals(currentGoals => [
+      ...currentGoals, 
+      { key: ''+currentGoals.length, value: enteredGoal}]);
   };
   
   return (
@@ -29,17 +37,35 @@ export default function App() {
                    value={enteredGoal}/>
         <Button title="ADD" onPress={addGoalHandler}/>
       </View>
-      <ScrollView>
-        {goals.map((goal, index) => 
-          <View key={index}>
-            <Text style={styles.listItem}>
-              {goal}
-            </Text>
-        </View>)}
-      </ScrollView>
+      <FlatList 
+        data={goals}
+        renderItem={itemData => (
+          <View style={styles.listItem}>
+            <Text>{itemData.item.value}</Text>
+          </View>
+        )}
+        />
+        
     </View>
   );
 }
+
+//Flatlist key generator example
+{/* <FlatList 
+  data={[{name: 'a'}, {name: 'b'}]} 
+  renderItem={
+    ({item}) => <Text>{item.name}</Text>
+  } 
+  keyExtractor={(item, index) => index.toString()}
+/> */}
+
+//ScrollView example
+// {goals.map((goal, index) => 
+//   <View key={index}>
+//     <Text style={styles.listItem}>
+//       {goal}
+//     </Text>
+// </View>)}
 
 //nested javascript object for styling
 const styles = StyleSheet.create({
