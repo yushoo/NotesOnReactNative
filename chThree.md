@@ -21,3 +21,8 @@
 ### Functions
 - event handlers:
     - onPress = onClick
+
+### Layout
+- Use flexbox for organizing and creating layouts
+    - for the main axis you style the child elements (flex style property), and for the cross axis you stlye the parent element
+- There are some differences between web and mobile flexbox
