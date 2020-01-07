@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, TextInput, StyleSheet, Button} from 'react-native';
+import {View, TextInput, StyleSheet, Button, Modal} from 'react-native';
 
 const GoalInput = props => {
     //text 
@@ -11,28 +11,33 @@ const GoalInput = props => {
   
 
     return(
-        <View style={styles.inputContainer}>
-        <TextInput placeholder="Goal" 
-                   style={styles.inputArea} 
-                   //don't add paranthesis because don't want to execute immediately
-                   onChangeText={goalInputHandler}
-                   value={props.currentInput}/>
-        <Button title="ADD" onPress={() => props.onAddHandler(enteredGoal)}/>
-      </View>
+        <Modal visible={props.visible} animationType="slide">
+            <View style={styles.inputContainer}>
+                <TextInput placeholder="Goal" 
+                        style={styles.inputArea} 
+                        //don't add paranthesis because don't want to execute immediately
+                        onChangeText={goalInputHandler}
+                        value={props.currentInput}/>
+                <Button title="ADD" onPress={() => props.onAddHandler(enteredGoal)}/>
+             </View>
+        </Modal>
+        
     );
 };
 
 const styles = StyleSheet.create({
     inputContainer: {
-        flexDirection: 'row', 
-        justifyContent: 'space-between', 
+        flex: 1,
+        flexDirection: 'column', 
+        justifyContent: 'center', 
         alignItems: 'center'
       },
       inputArea: {
         borderBottomColor: 'black', 
         borderBottomWidth: 1, 
         padding: 10, 
-        width: 200
+        width: 200,
+        marginBottom: 10
       }
 });
 
