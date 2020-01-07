@@ -24,6 +24,7 @@ export default function App() {
     setGoals(currentGoals => [
       ...currentGoals, 
       { id: ''+currentGoals.length, value: goalTitle}]);
+      setIsAddMode(false);
   };
 
   const removeGoalHandler = goalId => {
