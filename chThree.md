@@ -29,3 +29,26 @@
     - Can use flexbox stylings to have content adjust itself to the available space
 - There are some differences between web and mobile flexbox
 - Flatlist renders what's on the screen whereas scrollview renders all components. Both has it's pros and cons, but for an application with thousands of components, the scrollview would be ineffecient. 
+
+### Debugging
+- What to Debug?
+    - Error Messages / App Crashes
+        - Syntax errors
+        - Bugs in code (undefined values)
+        - "Unavoidable errors (e.g. failing network requests)
+    - Logical Errors
+        - Undesired or unexpected app behavior
+        - unexpected/ Unhandled user behavior
+        - Sequence of steps leads to errors
+    - Styling, Layout & UX
+        - Unexpected/ "wrong" styling or layout
+        - Inconsistent results on different devices
+        - Layout doesn't "work" on certain devices or orientations
+- How to Debug?
+    - Read the error messages 
+        - Often, the error message contains the solution or a exact pointer at the problematic code line
+    - console.log()
+        - Get a feeling for the "flow" of the code
+    - Chrome Debugger (+Breakpoints)
+        - Dive into the code in great detail step by step
+
