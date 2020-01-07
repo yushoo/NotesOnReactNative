@@ -24,6 +24,12 @@ export default function App() {
       ...currentGoals, 
       { id: ''+currentGoals.length, value: goalTitle}]);
   };
+
+  const removeGoalHandler = goalId => {
+    setGoals(currentGoals => {
+      return currentGoals.filter((goal) => goal.id !== goalId);
+    });
+  }
   
   return (
     <View style={styles.screen}>
@@ -33,7 +39,10 @@ export default function App() {
         // keyExtractor={(item, index) => item.id} 
         data={goals}
         renderItem={itemData => 
-          <GoalItem title={itemData.item.value} onDelete={() => console.log('HOOEEEE')}/>}
+          <GoalItem 
+          title={itemData.item.value} 
+          id={itemData.item.id}
+          onDelete={removeGoalHandler}/>}
         />
         
     </View>
