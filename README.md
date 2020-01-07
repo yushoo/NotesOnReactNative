@@ -20,6 +20,15 @@ Learning Sources: Academind, React Native Documentation, Stack Overflow
     - Functions
     - css in react native? 
 
-- Questions???
+- Questions/Observations
     - When to use self closing components or closing components
+    - Dealing with passing functions with parameters to components
+        - For a function to pass in parameters, an anonymous function is required as it sets it as a "tobe" executed function when its component is rendered. 
+        ```javascript
+            () => props.onAddHandler(enteredGoal)
+        ```
+        - We can also use the bind() feature
+        ```javascript
+            props.onAddGoal.bind(this, enteredGoal)
+        ```
 
